@@ -1,15 +1,20 @@
-import Item from './Item'
+import Item from "./Item";
 const Shop = (props) => {
-    const {itemInfo, adjustCartItems} = props
+  const { itemInfo, adjustCartItems } = props;
+  return (
+    <div>
+      Shop
+      {Object.keys(itemInfo).map((info) => {
+        return (
+          <Item
+            productInfo={itemInfo[info]}
+            adjustCartItems={adjustCartItems}
+            key={info.name}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
-    return(
-        <div>
-            Shop
-            {itemInfo.map(info => {
-                return <Item item={info.item} price={info.price} adjustCartItems={adjustCartItems} key={info.item}/>
-            })}
-        </div>
-    )
-}
-
-export default Shop
+export default Shop;

@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 const Item = (props) => {
-  const { item, price, adjustCartItems } = props;
+  const { productInfo, adjustCartItems } = props;
   const [quantity, setQuantity] = useState(0);
+  const { name, price, className } = productInfo;
 
   function adjustQuantity(event) {
     let newQuantity = event.target.value;
@@ -12,16 +13,17 @@ const Item = (props) => {
   }
 
   function reserve() {
-      let reservedInfo = {item: item, quantity: parseInt(quantity)}
-      adjustCartItems(reservedInfo)
+    let reservedInfo = { item: className, quantity: parseInt(quantity) };
+    adjustCartItems(reservedInfo);
   }
 
   return (
     <div className="item-card">
       <div className="image-wrapper">
-        <div className={`image ${item}`} />
+        <div className={`image ${className}`} />
       </div>
       <div className="item-info">
+        <div>{name}</div>
         <div>Price: ${price}/kg</div>
         <div>
           <span>
