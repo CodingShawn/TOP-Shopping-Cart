@@ -1,12 +1,12 @@
 import Navbar from './Navbar'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <h1>
                 Durian Goodness
             </h1>
-            <Navbar/>
+            <Navbar {...props}/>
         </header>
     )
 }

@@ -1,6 +1,8 @@
 import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
+    let numCartItems = Object.keys(props.cartItems).length
+
     return (
         <nav>
             <ul>
@@ -11,7 +13,7 @@ const Navbar = () => {
                     <Link to='/shop'>Shop</Link>
                 </li>
                 <li>
-                    <Link to='/cart'>Cart</Link>
+                    <Link to='/cart'>Cart { numCartItems ? `(${numCartItems})` : ""} </Link>
                 </li>
             </ul>
         </nav>
