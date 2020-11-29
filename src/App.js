@@ -13,16 +13,43 @@ function App() {
   };
   const [cartItems, setCartItems] = useState({});
 
-  function adjustCartItems(reservedInfo) {
+  function addCartItems(reservedInfo) {
     if (cartItems[reservedInfo.item]) {
-      let newQuantity = cartItems[reservedInfo.item].quantity + reservedInfo.quantity;
-      setCartItems({ ...cartItems, [reservedInfo.item]: {quantity: newQuantity, itemInfo: reservedInfo.productInfo} });
-    } else {
+      let newQuantity =
+        cartItems[reservedInfo.item].quantity + reservedInfo.quantity;
+      //Prevent adding more than 20kg to cart
+      if (newQuantity > 20) {
+        setCartItems({
+          ...cartItems,
+          [reservedInfo.item]: {
+            quantity: 20,
+            itemInfo: reservedInfo.productInfo,
+          },
+        });
+        console.log("set to 20");
+      } else {
+        setCartItems({
+          ...cartItems,
+          [reservedInfo.item]: {
+            quantity: newQuantity,
+            itemInfo: reservedInfo.productInfo,
+          },
+        });
+      }
+    } //If particular item has not been added to cart before
+    else {
       setCartItems({
         ...cartItems,
-        [reservedInfo.item]: {quantity: reservedInfo.quantity, itemInfo: reservedInfo.productInfo}
+        [reservedInfo.item]: {
+          quantity: reservedInfo.quantity,
+          itemInfo: reservedInfo.productInfo,
+        },
       });
     }
+  }
+
+  function adjustCartItems(adjustedCartItems) {
+    setCartItems(adjustedCartItems);
   }
 
   return (
@@ -31,10 +58,10 @@ function App() {
         <Header />
         <Route exact path="/" component={Home} />
         <Route path="/shop">
-          <Shop itemInfo={itemInfo} adjustCartItems={adjustCartItems} />
+          <Shop itemInfo={itemInfo} addCartItems={addCartItems} />
         </Route>
         <Route path="/cart">
-          <Cart cartItems={cartItems} />
+          <Cart cartItems={cartItems} adjustCartItems={adjustCartItems} />
         </Route>
       </div>
     </BrowserRouter>
