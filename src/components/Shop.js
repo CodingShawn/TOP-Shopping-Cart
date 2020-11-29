@@ -1,6 +1,6 @@
 import Item from "./Item";
 const Shop = (props) => {
-  const { itemInfo, adjustCartItems } = props;
+  const { itemInfo, addCartItems } = props;
   return (
     <div>
       Shop
@@ -8,7 +8,7 @@ const Shop = (props) => {
         return (
           <Item
             productInfo={itemInfo[info]}
-            adjustCartItems={adjustCartItems}
+            addCartItems={addCartItems}
             key={info.name}
           />
         );

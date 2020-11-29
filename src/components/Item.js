@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Item = (props) => {
-  const { productInfo, adjustCartItems } = props;
+  const { productInfo, addCartItems } = props;
   const [quantity, setQuantity] = useState(0);
   const { name, price, className } = productInfo;
 
@@ -13,8 +13,15 @@ const Item = (props) => {
   }
 
   function reserve() {
-    let reservedInfo = { item: className, quantity: parseInt(quantity), productInfo: productInfo };
-    adjustCartItems(reservedInfo);
+    if (quantity > 0) {
+      let reservedInfo = {
+        item: className,
+        quantity: parseInt(quantity),
+        productInfo: productInfo,
+      };
+      addCartItems(reservedInfo);
+    }
+    setQuantity(0);
   }
 
   return (
