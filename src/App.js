@@ -48,20 +48,32 @@ function App() {
     }
   }
 
-  function adjustCartItems(adjustedCartItems) {
-    setCartItems(adjustedCartItems);
+  function adjustCartItems(key, newQuantity) {
+    setCartItems({
+      ...cartItems,
+      [key]: { quantity: newQuantity, itemInfo: cartItems[key].itemInfo },
+    });
+  }
+
+  function deleteCartItem(key) {
+    const { [key]: value, ...newCartItems } = cartItems;
+    setCartItems(newCartItems);
   }
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header cartItems={cartItems} />
         <Route exact path="/" component={Home} />
         <Route path="/shop">
           <Shop itemInfo={itemInfo} addCartItems={addCartItems} />
         </Route>
         <Route path="/cart">
-          <Cart cartItems={cartItems} adjustCartItems={adjustCartItems} />
+          <Cart
+            cartItems={cartItems}
+            adjustCartItems={adjustCartItems}
+            deleteCartItem={deleteCartItem}
+          />
         </Route>
       </div>
     </BrowserRouter>
