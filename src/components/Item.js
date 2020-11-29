@@ -13,7 +13,7 @@ const Item = (props) => {
   }
 
   function reserve() {
-    let reservedInfo = { item: className, quantity: parseInt(quantity) };
+    let reservedInfo = { item: className, quantity: parseInt(quantity), productInfo: productInfo };
     adjustCartItems(reservedInfo);
   }
 
