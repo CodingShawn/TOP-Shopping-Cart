@@ -29,12 +29,13 @@ const Item = (props) => {
       <div className="image-wrapper">
         <div className={`image ${className}`} />
       </div>
-      <div className="item-info">
-        <div>{name}</div>
-        <div>Price: ${price}/kg</div>
-        <div>
+      <div>
+        <div className="item-info">
+          <span>{name}</span>{" "}
+        </div>
+        <div className="item-qty">
           <span>
-            Purchase Weight (Max 20kg):{" "}
+            Reserve Weight (${price}/kg):{" "}
             <input
               onChange={adjustQuantity}
               value={quantity}
@@ -43,12 +44,13 @@ const Item = (props) => {
               min="0"
               max="20"
             ></input>
-            kg
+            {" "}kg
           </span>
         </div>
-        <div>Total Price: ${quantity * price}</div>
         <div>
-          <button onClick={reserve}>Reserve</button>
+          <button className="reserve-btn" onClick={reserve}>
+            Reserve - Total Price: ${quantity * price}
+          </button>
         </div>
       </div>
     </div>

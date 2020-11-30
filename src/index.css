@@ -46,3 +46,96 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Own styling starts here */
+
+html{
+	height: 100%;
+	background-color: #FBEEC1;
+	margin: 10px;
+}
+/* Shop styling */
+
+.items-display {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 15px;
+	justify-content: start;
+	padding: 20px;
+}
+
+.item-card {
+	text-align: center;
+	font-weight: 600;
+	background-color: #8D8741;
+	border-radius: 4px;
+	color: #efefef;
+	border: 1px solid #333;
+}
+
+.image-wrapper {
+	padding-top: 100%;
+	position: relative;
+}
+
+.image {
+	background-size: cover;
+	border-radius: 4px;
+	position: absolute;
+	width: 95%;
+	height: 95%;
+	top: 2.5%;
+	left: 2.5%;
+}
+
+.cart {
+	background-size: cover;
+	height: 150px;
+	width: 150px;
+}
+
+.item-info {
+	padding: 10px;
+	font-weight: 700;
+	font-size: 28px;
+}
+
+.item-qty {
+	padding: 5px;
+}
+
+.reserve-btn {
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	background-color: #DAAD86;
+	border: 1px solid #999;
+	cursor: pointer;
+	color: #111;
+}
+
+.msw {
+	background-image: url(./assets/msw.jpg);
+}
+
+.redprawn {
+	background-image: url(./assets/red-prawn.jpeg);
+	background-position: center;
+}
+
+.d24 {
+	background-image: url(./assets/d24.jpg);
+}
