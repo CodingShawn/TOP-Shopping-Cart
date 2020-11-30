@@ -1,7 +1,7 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import Shop from "./components/Shop";
 import Home from "./components/Home";
-import Header from "./components/Header";
+import Navbar from './components/Navbar'
 import Cart from "./components/Cart";
 import "./index.css";
 import { useState } from "react";
@@ -68,7 +68,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header cartItems={cartItems} />
+        <Navbar cartItems={cartItems} />
         <Route exact path="/" component={Home} />
         <Route path="/shop">
           <Shop itemInfo={itemInfo} addCartItems={addCartItems} />
