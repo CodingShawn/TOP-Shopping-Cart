@@ -59,11 +59,62 @@ a {
 
 /* Own styling starts here */
 
+* {
+	box-sizing: border-box;
+}
+
 html{
 	height: 100%;
 	background-color: #FBEEC1;
-	margin: 10px;
+	margin: 0 10px;
 }
+/* Nav styling */
+
+nav {
+	height: 3vh;
+}
+/* Home Styling */
+
+header {
+	height: 10vh;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	color: #333;
+}
+
+header h1 {
+	font-size: 36px;
+	padding-bottom: 10px;
+}
+
+header h2 {
+	font-size: 28px;
+}
+
+.home-wrapper {
+	margin: 0 -10px;
+}
+
+.home-img-wrapper {
+	position: relative;
+	padding-top: 87vh;
+}
+
+.home-durian {
+	background-image: url(./assets/home-durian.jpg);
+}
+
+.home-img {
+	background-size: cover;
+	border-radius: 4px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-position: center;
+}
+
 /* Shop styling */
 
 .shop {
@@ -183,3 +234,4 @@ html{
 	background-image: url(./assets/d13.jpg);
 	background-position: center;
 }
+
