@@ -10,6 +10,11 @@ function App() {
   const itemInfo = {
     msw: { name: "Mao Shan Wang", price: 20, className: "msw" },
     redprawn: { name: "Red Prawn", price: 13, className: "redprawn" },
+    d24: { name: "D24", price: 13, className: "d24"},
+    xo: { name: "XO", price: 15, className: "xo"},
+    s17: { name: "S17", price: 14, className: "s17" },
+    jf: { name: "Jin Feng", price: 18, className: "jf"},
+    d13: {name: "D13", price: 10, className: "d13"}
   };
   const [cartItems, setCartItems] = useState({});
 

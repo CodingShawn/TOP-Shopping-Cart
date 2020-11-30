@@ -138,4 +138,25 @@ html{
 
 .d24 {
 	background-image: url(./assets/d24.jpg);
+	background-position: center;
+}
+
+.xo {
+	background-image: url(./assets/xo.jpeg);
+	background-position: center;
+}
+
+.s17 {
+	background-image: url(./assets/s17.jpg);
+	background-position: center;
+}
+
+.jf {
+	background-image: url(./assets/jinfeng.jpg);
+	background-position: center;
+}
+
+.d13 {
+	background-image: url(./assets/d13.jpg);
+	background-position: center;
 }
