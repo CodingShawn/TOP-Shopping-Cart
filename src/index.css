@@ -185,12 +185,6 @@ header h2 {
 	left: 2.5%;
 }
 
-.cart {
-	background-size: cover;
-	height: 150px;
-	width: 150px;
-}
-
 .item-info {
 	padding: 10px;
 	font-weight: 700;
@@ -213,6 +207,89 @@ header h2 {
 	cursor: pointer;
 	color: #111;
 }
+
+/* Cart Styling */
+
+.table-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 50px 10px;
+	color: #333;
+	font-weight: 700;
+	font-size: 18px;
+	margin: 6px -26px 0 -26px;
+}
+
+th {
+	text-align: start;
+	font-size: 28px;
+}
+
+.cart-img-wrapper {
+	position: relative;
+	height: 190px;
+	width: 160px;
+	background-color: #8D8741 ;
+	border-radius: 4px;
+}
+
+.cart-img {
+	background-size: cover;
+	height: 85%;
+	width: 95%;
+	border-radius: 4px;
+	position: absolute;
+	top: 2.5%;
+	left: 2.5%;
+}
+
+.cart-item {
+	position: absolute;
+	bottom: 6px;
+	left: 5px;
+	color: #efefef;
+}
+
+.align-end {
+	text-align: end;
+}
+
+.order-btn {
+	width: 100%;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+}
+
+tfoot {
+	font-size: 28px;
+}
+
+@media screen and (max-width: 850px) {
+	.cart-img-wrapper {
+		height: auto;
+		width: 140px;
+	}
+
+	.cart-img {
+		display: none;
+	}
+
+	.cart-item {
+		top: 10%;
+		font-size: 16px;
+	}
+
+	.order-btn {
+		font-size: 16px;
+	}
+}
+
 
 .msw {
 	background-image: url(./assets/msw.jpg);

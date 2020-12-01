@@ -28,52 +28,54 @@ const Cart = (props) => {
   }
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th colSpan="2">Durian</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(cartItems).map((key) => {
-          let itemInfo = cartItems[key].itemInfo;
-          return (
-            <tr>
-              <td>
-                <div className={`cart ${itemInfo.className}`}></div>
-              </td>
-              <td>{itemInfo.name}</td>
-              <td>${itemInfo.price}/kg</td>
-              <td>
-                {cartItems[key].quantity}kg
-                <button onClick={() => addQuantity(key)}>+</button>
-                <button onClick={() => reduceQuantity(key)}>-</button>
-              </td>
-              <td>${cartItems[key].quantity * itemInfo.price}</td>
-              <td>
-                <button onClick={() => removeItem(key)}>
-                  Remove From Cart
-                </button>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colSpan="4">Total:</td>
-          <td>${getTotalPrice()}</td>
-        </tr>
-        <tr>
-          <td colSpan="5">
-            <button>Place Order</button>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
+    <div className="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Durian</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.keys(cartItems).map((key) => {
+            let itemInfo = cartItems[key].itemInfo;
+            return (
+              <tr>
+                <td className="cart-img-wrapper">
+                  <div className={`cart-img ${itemInfo.className}`}></div>
+                  <div className="cart-item">{itemInfo.name}</div>
+                </td>
+                <td>${itemInfo.price}/kg</td>
+                <td>
+                  {cartItems[key].quantity}kg 
+                  {"  "}
+                  <button onClick={() => addQuantity(key)}>+</button>
+                  {"  "}
+                  <button onClick={() => reduceQuantity(key)}>-</button>
+                </td>
+                <td>${cartItems[key].quantity * itemInfo.price}</td>
+                <td>
+                  <button onClick={() => removeItem(key)}>
+                    Remove From Cart
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan="3" className="align-end">Total:</td>
+            <td>${getTotalPrice()}</td>
+            <td>
+              <button className="order-btn">Place Reservation</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   );
 };
 
