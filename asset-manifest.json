@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TOP-Shopping-Cart/static/css/main.aa7a5895.chunk.css",
-    "main.js": "/TOP-Shopping-Cart/static/js/main.cfae4a60.chunk.js",
-    "main.js.map": "/TOP-Shopping-Cart/static/js/main.cfae4a60.chunk.js.map",
+    "main.css": "/TOP-Shopping-Cart/static/css/main.2d309bde.chunk.css",
+    "main.js": "/TOP-Shopping-Cart/static/js/main.59cbcc52.chunk.js",
+    "main.js.map": "/TOP-Shopping-Cart/static/js/main.59cbcc52.chunk.js.map",
     "runtime-main.js": "/TOP-Shopping-Cart/static/js/runtime-main.492e2f90.js",
     "runtime-main.js.map": "/TOP-Shopping-Cart/static/js/runtime-main.492e2f90.js.map",
     "static/js/2.4422b941.chunk.js": "/TOP-Shopping-Cart/static/js/2.4422b941.chunk.js",
     "static/js/2.4422b941.chunk.js.map": "/TOP-Shopping-Cart/static/js/2.4422b941.chunk.js.map",
     "index.html": "/TOP-Shopping-Cart/index.html",
-    "static/css/main.aa7a5895.chunk.css.map": "/TOP-Shopping-Cart/static/css/main.aa7a5895.chunk.css.map",
+    "static/css/main.2d309bde.chunk.css.map": "/TOP-Shopping-Cart/static/css/main.2d309bde.chunk.css.map",
     "static/js/2.4422b941.chunk.js.LICENSE.txt": "/TOP-Shopping-Cart/static/js/2.4422b941.chunk.js.LICENSE.txt",
     "static/media/index.css": "/TOP-Shopping-Cart/static/media/xo.9d890680.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.492e2f90.js",
     "static/js/2.4422b941.chunk.js",
-    "static/css/main.aa7a5895.chunk.css",
-    "static/js/main.cfae4a60.chunk.js"
+    "static/css/main.2d309bde.chunk.css",
+    "static/js/main.59cbcc52.chunk.js"
   ]
 }
